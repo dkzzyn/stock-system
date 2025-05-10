@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import logoHitss from '../../assets/hitssLogo.png';
+import dataCenter from '../../assets/dataCenter.png'
 
 function Login() {
   const [email, setEmail] = useState('user@example.com');
@@ -22,11 +23,9 @@ function Login() {
 
     if (email === "user@example.com" && password === "password123") {
       setError('');
-      // Salvar o login (simulado)
       if (rememberMe) {
         localStorage.setItem('user', JSON.stringify({ email }));
       }
-      // Redirecionar para o dashboard
       navigate('/dashboard');
     } else {
       setError("Email ou senha inválidos.");
@@ -38,39 +37,40 @@ function Login() {
       <div className="login-container">
         <div className="login-left">
           <img src={logoHitss} alt="Logo" className="logo" />
-          <h1>Hello, welcome!</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h2 className="title-primary">
+            🎉 Bem-vindo ao nosso novo <br />Sistema de Controle de Estoque!
+          </h2>
+          <p className="description">
+            Desenvolvido para facilitar o controle, otimizar o tempo e garantir
+            mais eficiência na gestão dos seus produtos. Estamos felizes em ter
+            você conosco nessa nova fase!
+          </p>
+          <img src={dataCenter} alt="dataCenter" className=" dataCenter" />
         </div>
+        
 
         <div className="login-right">
           <form className="form" onSubmit={handleSubmit}>
             <label>Email address</label>
-            <input 
-              type="email" 
-              placeholder="name@mail.com" 
-              value={email} 
-              onChange={(e) => setEmail(e.target.value)} 
+            <input
+              type="email"
+              placeholder="name@mail.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             <label>Password</label>
-            <input 
-              type="password" 
-              placeholder="●●●●●●●" 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)} 
+            <input
+              type="password"
+              placeholder="●●●●●●●"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
             {error && <p className="error-message">{error}</p>}
 
             <div className="options">
-              <label>
-                <input 
-                  type="checkbox" 
-                  checked={rememberMe} 
-                  onChange={() => setRememberMe(!rememberMe)} 
-                /> 
-                Remember me
-              </label>
+
               <a href="#">Forgot password?</a>
             </div>
 

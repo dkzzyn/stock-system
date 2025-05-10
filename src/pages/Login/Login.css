@@ -19,31 +19,63 @@ body, html, #root {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background: #ababab;
-  background: linear-gradient(140deg, rgba(171, 171, 171, 1) 0%, rgba(255, 224, 224, 1) 50%, rgba(255, 255, 255, 1) 100%);
+  background-image: url("../../assets/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .login-container {
   display: flex;
   width: 900px;
   height: 500px;
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.288);
   border-radius: 12px;
   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   position: relative;
+  backdrop-filter: blur(10px);
 }
 
 .login-left {
   flex: 1;
-  background: #ff0000c7;
+  background: #f5f5f5c7;
   color: rgb(29, 29, 29);
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 20px;
   position: relative;
+  align-items: center;
+}
+
+.dataCenter {
+  max-width: 80%;
+  margin-top: -13%;
+}
+
+.title-primary {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-size: 30px;
+  padding-top: 10%;
+}
+
+.description {
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.title-primary {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+  color: #333;
 }
 
 .logo {
@@ -51,7 +83,6 @@ body, html, #root {
   top: 0;
   margin-top: 15px;
   left: 25%;
-  background-color: #ffffff;
   border-radius: 30px;
 }
 
