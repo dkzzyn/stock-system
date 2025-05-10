@@ -13,7 +13,7 @@
 
 .logo {
   font-size: 1.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .sidebarLogo{
@@ -62,3 +62,16 @@
   transform: translateX(5px);
   font-weight: bold;
 }
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.main-content {
+  margin-left: 250px; /* Largura da sidebar */
+  padding: 40px;
+  background-color: white;
+  flex: 1;
+  overflow-y: auto;
+}
+
